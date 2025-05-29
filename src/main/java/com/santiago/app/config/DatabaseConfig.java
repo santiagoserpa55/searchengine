@@ -9,9 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
-
-// beans de configuraciones
-// conectarnos a la DB
+// beans de configuraciones para conectarnos a la DB
 @Configuration
 public class DatabaseConfig {
 	/*

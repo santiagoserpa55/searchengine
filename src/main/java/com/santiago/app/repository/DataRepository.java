@@ -26,7 +26,9 @@ public class DataRepository {
 	}
 
 	public List<DataModel> getData() {
-		String getQuery = "SELECT subscription_date, city, company, country, customer_id, email, first_name, last_name FROM customers";
+		//String getQuery = "SELECT subscription_date, city, company, country, customer_id, email, first_name, last_name FROM customers";
+		String getQuery = "SELECT nit, razon_social, numero_contrato, estado, departamento, tipo_contrato,"
+				+ "codigo_tarifa, codigo_propio, descripcion_tarifa, valor FROM public.contratos";
 		/*
 		 * debemos mapear los campos que estan en la base de datos para que existan en
 		 * java, usamos un mapper
@@ -39,15 +41,18 @@ public class DataRepository {
 
 		@Override
 		public DataModel mapRow(ResultSet rs, int rowNum) throws SQLException {
-			String subscriptionDate = rs.getString("subscription_date");
-			String customerId = rs.getString("customer_id");
-			String firstName = rs.getString("first_name");
-			String lastName = rs.getString("last_name");
-			String company = rs.getString("company");
-			String city = rs.getString("city");
-			String country = rs.getString("country");
-			String email = rs.getString("email");
-			return new DataModel(subscriptionDate, customerId, firstName, lastName, company, city,country, email);
+			String nit = rs.getString("nit");
+			String razonSocial = rs.getString("razon_social");
+			String numContrato = rs.getString("numero_contrato");
+			String estado = rs.getString("estado");
+			String departamento = rs.getString("departamento");
+			String tipoContrato = rs.getString("tipo_contrato");
+			String codTarifa = rs.getString("codigo_tarifa");
+			String codPropio = rs.getString("codigo_propio");
+			String descTarifa = rs.getString("descripcion_tarifa");
+			String valor = rs.getString("valor");
+		
+			return new DataModel(nit, razonSocial, numContrato, estado, departamento, tipoContrato,codTarifa, codPropio,descTarifa, valor);
 		}
 
 	}

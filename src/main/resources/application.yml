@@ -6,7 +6,7 @@ datasource:
   customs:
     query-timeout: 20
   my-connection:
-    jdbc-url: jdbc:postgresql://localhost:5433/DBQuerys
+    jdbc-url: jdbc:postgresql://localhost:5433/familibroeps
     username: santiagoserpa55
     password: admin2017
     maximum-pool-size: 10

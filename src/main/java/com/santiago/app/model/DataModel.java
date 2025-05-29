@@ -2,90 +2,111 @@ package com.santiago.app.model;
 
 public class DataModel {
 
-	private String subscriptionDate; // date
-	private String customerId; // integer or long
-	private String firstName;
-	private String lastName;
-	private String company;
-	private String city;
-	private String country;
-	private String email;
+	private String nit;
+	private String razonSocial;
+	private String numContrato;
+	private String estado;
+	private String departamento;
+	private String tipoContrato;
+	private String codTarifa;
+	private String codPropio;
+	private String descTarifa;
+	private String valor;
+	
 
-	public DataModel(String subscriptionDate, String customerId, String firstName, String lastName, String company,
-			String city, String country, String email) {
+	public DataModel(String nit, String razonSocial, String numContrato, String estado, String departamento,
+			String tipoContrato, String codTarifa, String codPropio, String descTarifa, String valor) {
 		super();
-		this.subscriptionDate = subscriptionDate;
-		this.customerId = customerId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.company = company;
-		this.city = city;
-		this.country = country;
-		this.email = email;
+		this.nit = nit;
+		this.razonSocial = razonSocial;
+		this.numContrato = numContrato;
+		this.estado = estado;
+		this.departamento = departamento;
+		this.tipoContrato = tipoContrato;
+		this.codTarifa = codTarifa;
+		this.codPropio = codPropio;
+		this.descTarifa = descTarifa;
+		this.valor = valor;
 	}
 
-	public String getSubscriptionDate() {
-		return subscriptionDate;
+	public String getNit() {
+		return nit;
 	}
 
-	public void setSubscriptionDate(String subscriptionDate) {
-		this.subscriptionDate = subscriptionDate;
+	public void setNit(String nit) {
+		this.nit = nit;
 	}
 
-	public String getCustomerId() {
-		return customerId;
+	public String getRazonSocial() {
+		return razonSocial;
 	}
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
+	public void setRazonSocial(String razonSocial) {
+		this.razonSocial = razonSocial;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getNumContrato() {
+		return numContrato;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setNumContrato(String numContrato) {
+		this.numContrato = numContrato;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getEstado() {
+		return estado;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 
-	public String getCompany() {
-		return company;
+	public String getDepartamento() {
+		return departamento;
 	}
 
-	public void setCompany(String company) {
-		this.company = company;
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
 	}
 
-	public String getCity() {
-		return city;
+	public String getTipoContrato() {
+		return tipoContrato;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setTipoContrato(String tipoContrato) {
+		this.tipoContrato = tipoContrato;
 	}
 
-	public String getCountry() {
-		return country;
+	public String getCodTarifa() {
+		return codTarifa;
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCodTarifa(String codTarifa) {
+		this.codTarifa = codTarifa;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getCodPropio() {
+		return codPropio;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCodPropio(String codPropio) {
+		this.codPropio = codPropio;
+	}
+
+	public String getDescTarifa() {
+		return descTarifa;
+	}
+
+	public void setDescTarifa(String descTarifa) {
+		this.descTarifa = descTarifa;
+	}
+	
+	public String getValor() {
+		return valor;
+	}
+
+	public void setValor(String descTarifa) {
+		this.descTarifa = valor;
 	}
 
 }
