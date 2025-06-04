@@ -26,6 +26,7 @@ public class DatabaseConfig {
 	public JdbcTemplate crudJdbcTemplate(DataSource crudDataSource) {
 		var jdbcTemplate = new JdbcTemplate(crudDataSource); // le pasamos la conex del bean anterior //DataSource
 		return jdbcTemplate;
+		
 	}
 	
 	// este te permite trabajar con parametros mucho mas facil

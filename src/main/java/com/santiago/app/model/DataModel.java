@@ -11,8 +11,7 @@ public class DataModel {
 	private String codTarifa;
 	private String codPropio;
 	private String descTarifa;
-	private String valor;
-	
+	private String valor;	
 
 	public DataModel(String nit, String razonSocial, String numContrato, String estado, String departamento,
 			String tipoContrato, String codTarifa, String codPropio, String descTarifa, String valor) {
@@ -27,6 +26,10 @@ public class DataModel {
 		this.codPropio = codPropio;
 		this.descTarifa = descTarifa;
 		this.valor = valor;
+	}
+
+	public DataModel(String razonSocial) {
+		this.razonSocial = razonSocial;
 	}
 
 	public String getNit() {
@@ -105,8 +108,8 @@ public class DataModel {
 		return valor;
 	}
 
-	public void setValor(String descTarifa) {
-		this.descTarifa = valor;
+	public void setValor(String valor) {
+		this.valor = valor;
 	}
 
 }

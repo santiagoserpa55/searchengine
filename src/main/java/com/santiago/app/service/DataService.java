@@ -14,8 +14,12 @@ public class DataService {
 		this.repository = dataRepository;
 	}
 
-	public List<DataModel> getAllData() {
-		return repository.getData();
+	public List<DataModel> getAllContratos() {
+		return repository.getContratos();
+	}
+
+	public List<DataModel> getRazones() {
+		return repository.filtroRazones();
 	}
 
 }

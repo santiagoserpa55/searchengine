@@ -19,9 +19,14 @@ public class DataController {
 		this.dataService = controlador;
 	}
 
-	@GetMapping("/data")
-	public List<DataModel> getAllData() {
-		return dataService.getAllData();
+	@GetMapping("/contratos")
+	public List<DataModel> getContratos() {
+		return dataService.getAllContratos();
+	}
+	//campo que filtra la razon social unica
+	@GetMapping("/getRazonUnica")
+	public List<DataModel> getRazones() {
+		return dataService.getRazones();
 	}
 
 }

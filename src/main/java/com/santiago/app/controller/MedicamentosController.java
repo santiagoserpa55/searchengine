@@ -22,4 +22,14 @@ public class MedicamentosController {
 	public List<MedicamentosModel> getMedicamentos() {
 		return medicamentosService.getAllMedicamentos();
 	}
+	
+	@GetMapping("/filtroMedCum")
+	public List<MedicamentosModel> filtroMedicamentosCum() {
+		return medicamentosService.filtroMedicamentosCum();
+	}
+	
+	@GetMapping("/filtroMedAtc")
+	public List<MedicamentosModel> filtroMedicamentosAtc() {
+		return medicamentosService.filtroMedicamentosAtc();
+	}
 }

@@ -19,20 +19,19 @@ public class DataRepository {
 
 	private final NamedParameterJdbcTemplate jdbcTemplate;
 	private final DataMapper mapper = new DataMapper();
+	private final RazonMapper mapperRazones = new RazonMapper(); 
 
 	// inyeccion de dependencias asi que ya podemos usar el objeto
 	public DataRepository(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
 		this.jdbcTemplate = namedParameterJdbcTemplate;
 	}
 
-	public List<DataModel> getData() {
-		//String getQuery = "SELECT subscription_date, city, company, country, customer_id, email, first_name, last_name FROM customers";
+	public List<DataModel> getContratos() {
 		String getQuery = "SELECT nit, razon_social, numero_contrato, estado, departamento, tipo_contrato,"
 				+ "codigo_tarifa, codigo_propio, descripcion_tarifa, valor FROM public.contratos";
 		/*
 		 * debemos mapear los campos que estan en la base de datos para que existan en
 		 * java, usamos un mapper
-		 * 
 		 */
 		return jdbcTemplate.query(getQuery, mapper);
 	}
@@ -54,7 +53,20 @@ public class DataRepository {
 		
 			return new DataModel(nit, razonSocial, numContrato, estado, departamento, tipoContrato,codTarifa, codPropio,descTarifa, valor);
 		}
+	}
+	
+	private static class RazonMapper implements RowMapper<DataModel> {
 
+		@Override
+		public DataModel mapRow(ResultSet rs, int rowNum) throws SQLException {
+			String razonSocial = rs.getString("razon_social");
+			return new DataModel(razonSocial);
+		}
+	}
+	
+	public List<DataModel> filtroRazones() {
+		String razonesUnicas = "SELECT DISTINCT(razon_social) FROM contratos";
+		return jdbcTemplate.query(razonesUnicas, mapperRazones);
 	}
 
 }

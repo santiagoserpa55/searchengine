@@ -16,6 +16,15 @@ public class MedicamentosModel {
 		this.estado = estado;
 	}
 
+  // Métodos estáticos de fábrica
+  public static MedicamentosModel porCum(String cum) {
+      return new MedicamentosModel(cum, null, null, null, null);
+  }
+
+  public static MedicamentosModel porAtc(String atc) {
+      return new MedicamentosModel(null, atc, null, null, null);
+  }
+
 	public String getCum() {
 		return cum;
 	}

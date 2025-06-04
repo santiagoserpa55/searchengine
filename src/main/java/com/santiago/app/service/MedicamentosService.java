@@ -20,4 +20,13 @@ public class MedicamentosService {
 		return repository.getMedicamentos();
 	}
 
+	public List<MedicamentosModel> filtroMedicamentosCum() {
+		return repository.filtroCum();
+	}
+	
+
+	public List<MedicamentosModel> filtroMedicamentosAtc() {
+		return repository.filtroAtc();
+	}
+
 }
