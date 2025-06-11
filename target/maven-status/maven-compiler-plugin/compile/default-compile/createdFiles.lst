@@ -1,0 +1,15 @@
+com\santiago\app\config\DatabaseConfig.class
+com\santiago\app\repository\MedicamentosRepository$FiltroAtcMapper.class
+com\santiago\app\repository\DataRepository$RazonMapper.class
+com\santiago\app\model\DataModel.class
+com\santiago\app\repository\DataRepository$DataMapper.class
+com\santiago\app\service\MedicamentosService.class
+com\santiago\app\repository\MedicamentosRepository.class
+com\santiago\app\model\MedicamentosModel.class
+com\santiago\app\controller\MedicamentosController.class
+com\santiago\app\repository\DataRepository.class
+com\santiago\app\controller\DataController.class
+com\santiago\app\repository\MedicamentosRepository$FiltroCumMapper.class
+com\santiago\app\service\DataService.class
+com\santiago\app\repository\MedicamentosRepository$DataMapper.class
+com\santiago\app\SearchengineappApplication.class
